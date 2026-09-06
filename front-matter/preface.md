@@ -123,6 +123,10 @@ about, because it is mostly old engineering wearing new clothes and because
 every lab here runs. The larger arc is an argument, offered as an argument, and
 you should feel free to take the machinery and leave the philosophy.
 
+One practical note. Every term the series relies on, from artifact and
+emission to the frozen core, is defined in this book at first use, and all of
+them are collected in one glossary, Appendix E of Book IV.
+
 ## Who I hope reads it
 
 Engineers who have built an agent that worked beautifully in a demo and then

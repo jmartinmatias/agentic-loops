@@ -122,7 +122,7 @@ Which sets up the real question, the one the rest of this book exists to answer:
 
 ## 1.4 What "Frozen" Means
 
-Time to make our central metaphor precise, because we are going to lean on it for two thousand pages.
+Time to make our central metaphor precise, because we are going to lean on it for four books.
 
 Every piece of a software system belongs to one of three categories, and the sorting question is simply: *when does it come into existence?*
 

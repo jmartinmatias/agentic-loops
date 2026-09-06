@@ -1,0 +1,6 @@
+# GitHub Pages renders this repository as a small site, so the chapters can be read in a browser:
+# https://jmartinmatias.github.io/agentic-loops/
+title: Agentic Loops
+description: Book I of The Generativization Series, by José Luis Martin Matias. Two free chapters, their labs, and the reference runtime.
+theme: jekyll-theme-minimal
+show_downloads: false

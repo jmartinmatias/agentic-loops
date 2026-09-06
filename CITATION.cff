@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you refer to this book, please cite it as below."
+title: "Agentic Loops: Building Software Where Models Decide What Happens Next"
+authors:
+  - family-names: "Martin Matias"
+    given-names: "José Luis"
+year: 2026
+url: "https://github.com/jmartinmatias/agentic-loops"

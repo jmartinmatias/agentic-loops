@@ -4,6 +4,8 @@
 
 *Book I of The Generativization Series, by José Luis Martin Matias.*
 
+[![labs](https://github.com/jmartinmatias/agentic-loops/actions/workflows/labs.yml/badge.svg)](https://github.com/jmartinmatias/agentic-loops/actions/workflows/labs.yml) · [Read online](https://jmartinmatias.github.io/agentic-loops/)
+
 <img src="cover/front.png" width="200" alt="Agentic Loops, front cover">
 
 > **When the machine decides, what keeps it honest?**

@@ -136,6 +136,10 @@ class SqliteStore:
                       facts=tuple(Obs(**o) for o in d["facts"]))
         return state, json.loads(row[1])
 
+    def close(self):
+        self.db.close()
+
+
 class MemoryStore(SqliteStore):
     def __init__(self):
         super().__init__(":memory:")
@@ -433,6 +437,7 @@ def main():
         model2: ModelPort = LiveModel() if a.live else ScriptedModel(SCRIPT[final.step:])
         Harness(cfg, model2, world, store, "run-1").run(resume=True)
 
+    store.close()
     print(f"\nWORLD -- billing {world.get('billing_fetches',0)}x, "
           f"crm {world.get('crm_fetches',0)}x, "
           f"published {world.get('published',0)}, "

@@ -1,4 +1,4 @@
-> *This is the preface of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here with two free sample chapters. [Table of contents](table-of-contents.md) · [Back to the book](../README.md).*
+> *This is the front matter of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here with free sample chapters. [Table of contents](table-of-contents.md) · [Back to the book](../README.md).*
 
 # Preface
 
@@ -147,6 +147,6 @@ for.
 
 ---
 
-*End of the preface. Chapter 1, "One Small Step", is free: [read it](../chapters/01-one-small-step.md).*
+*End of the front matter. Chapter 1, "One Small Step", is free: [read it](../chapters/01-one-small-step.md).*
 
 © 2026 José Luis Martin Matias. All rights reserved.

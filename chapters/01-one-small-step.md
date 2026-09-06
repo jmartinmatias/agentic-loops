@@ -1,4 +1,4 @@
-> *This is Chapter 1 of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here as a free sample chapter. The lab it ends with is [`labs/ch01_*_lab.py`](../labs/) and runs without an API key. [Back to the book](../README.md).*
+> *This is Chapter 1 of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here as a free sample chapter. The lab it ends with is [`labs/ch01_one_small_step_lab.py`](../labs/ch01_one_small_step_lab.py) and runs without an API key. [Back to the book](../README.md).*
 
 # Chapter 1: One Small Step
 ### *Why the loop is the program*

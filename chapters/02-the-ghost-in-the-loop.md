@@ -1,4 +1,4 @@
-> *This is Chapter 2 of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here as a free sample chapter. The lab it ends with is [`labs/ch02_*_lab.py`](../labs/) and runs without an API key. [Back to the book](../README.md).*
+> *This is Chapter 2 of* Agentic Loops, *Book I of The Generativization Series, by José Luis Martin Matias, published here as a free sample chapter. The lab it ends with is [`labs/ch02_the_ghost_in_the_loop_lab.py`](../labs/ch02_the_ghost_in_the_loop_lab.py) and runs without an API key. [Back to the book](../README.md).*
 
 # Chapter 2: The Ghost in the Loop
 ### *Putting a model inside*

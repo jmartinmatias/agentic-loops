@@ -12,3 +12,4 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: ./run_all_labs.sh
+      - run: python3 check_chapters.py

@@ -4,6 +4,8 @@
 
 *Book I of The Generativization Series, by José Luis Martin Matias.*
 
+<img src="cover/front.png" width="220" align="right" alt="Agentic Loops, front cover">
+
 > **When the machine decides, what keeps it honest?**
 
 For fifty years, software worked because somebody wrote down what should happen
@@ -137,10 +139,10 @@ step, and holds the rest still so you can see what it costs.
 
 ## The series
 
-- **Book I, Agentic Loops:** the model decides *what happens next*.
-- **Book II, Generative Agents:** the system decides *who exists to do the work*.
-- **Book III, Generative Loops:** the system decides *what computation to run*.
-- **Book IV, After Software:** what remains when all three are generated.
+- **Book I, Agentic Loops:** the model decides *what happens next*. Sample chapters at [jmartinmatias/agentic-loops](https://github.com/jmartinmatias/agentic-loops).
+- **Book II, Generative Agents:** the system decides *who exists to do the work*. Sample chapters at [jmartinmatias/generative-agents](https://github.com/jmartinmatias/generative-agents).
+- **Book III, Generative Loops:** the system decides *what computation to run*. Sample chapters at [jmartinmatias/generative-loops](https://github.com/jmartinmatias/generative-loops).
+- **Book IV, After Software:** what remains when all three are generated. Sample chapters at [jmartinmatias/after-software](https://github.com/jmartinmatias/after-software).
 
 Each book ends by exposing the next thing still frozen.
 

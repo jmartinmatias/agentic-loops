@@ -1,8 +1,8 @@
 # Agentic Loops: Table of Contents
 
-*Book I of The Generativization Series, by José Luis Martin Matias. The preface and the chapters marked free are in this repository, as Markdown and as PDF cut from the typeset book; the contents pages as typeset are [table-of-contents.pdf](table-of-contents.pdf).*
+*Book I of The Generativization Series, by José Luis Martin Matias. The preface and the chapters marked free are in this repository, as Markdown and as PDF cut from the typeset book; the contents pages as typeset are [table-of-contents.pdf](https://github.com/jmartinmatias/agentic-loops/raw/main/front-matter/table-of-contents.pdf).*
 
-**Preface**  ·  free: [Markdown](preface.md) · [PDF](preface.pdf)
+**Preface**  ·  free: [Markdown](preface.md) · [PDF](https://github.com/jmartinmatias/agentic-loops/raw/main/front-matter/preface.pdf)
 
 ## Part I: The Machine That Decides
 

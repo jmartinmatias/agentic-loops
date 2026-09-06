@@ -139,12 +139,13 @@ step, and holds the rest still so you can see what it costs.
 
 ## The series
 
-- **Book I, Agentic Loops:** the model decides *what happens next*. Sample chapters at [jmartinmatias/agentic-loops](https://github.com/jmartinmatias/agentic-loops).
-- **Book II, Generative Agents:** the system decides *who exists to do the work*. Sample chapters at [jmartinmatias/generative-agents](https://github.com/jmartinmatias/generative-agents).
-- **Book III, Generative Loops:** the system decides *what computation to run*. Sample chapters at [jmartinmatias/generative-loops](https://github.com/jmartinmatias/generative-loops).
-- **Book IV, After Software:** what remains when all three are generated. Sample chapters at [jmartinmatias/after-software](https://github.com/jmartinmatias/after-software).
+- **Book I, Agentic Loops:** the model decides *what happens next*. This repository.
+- **Book II, Generative Agents:** the system decides *who exists to do the work*.
+- **Book III, Generative Loops:** the system decides *what computation to run*.
+- **Book IV, After Software:** what remains when all three are generated.
 
-Each book ends by exposing the next thing still frozen.
+Each book ends by exposing the next thing still frozen. Sample chapters of the
+other three books will follow.
 
 ## Licenses
 

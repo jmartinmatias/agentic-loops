@@ -116,6 +116,10 @@ Here is why this tour matters and is not just a party trick. In every single exa
 
 Which sets up the real question, the one the rest of this book exists to answer: if the anatomy never changes, what exactly is new now? Not the loop. The loop is fine. What is new is *who writes the inside of it*.
 
+> **If you arrived with a different vocabulary**
+>
+> The tooling world has its own names for the things this series names, and it is worth mapping them once, because the four layers are underneath all of them. An **agent harness**, the fixed machinery that gives a model its tools, its state, its permissions, and its loop, is this book's subject from Chapter 9 onward, where it is called the exoskeleton: actor and flow held frozen around a generated body. **Evals** are the guarantee layer pointed at a component whose behavior is generated rather than written, and Chapter 12 is about what that costs when the thing under test is a distribution rather than a function. A **gauntlet loop**, run the agent until its output survives a battery of checks, is a stopping condition and a verifier bolted together; Chapter 10 is about the first half, Chapter 12 the second, and the question the pattern rarely asks, who wrote the checks and whether the thing being checked can see them, is the subject of Book III. And a **self-improving agent**, in the strong sense of a system that rewrites its own harness, is the one thing the series argues should not exist, on structural grounds that take until Book III, Chapter 13 to earn. The words change. The layers do not.
+
 ## 1.4 What "Frozen" Means
 
 Time to make our central metaphor precise, because we are going to lean on it for two thousand pages.
@@ -148,7 +152,7 @@ Then the runtime residue: thinner, humbler, and telling. **Assertions** die loud
 
 Notice the proportions. Classical software front-loads its guarantees: the heavy machinery (types, tests, proofs, review) operates on the frozen artifacts *before* execution, and the runtime keeps only a light residue, because deterministic replay of verified artifacts does not need much guarding. The Apollo software was tested, simulated, and inspected into the ground for years; the restart logic was the thin last line, and in the event, the thin last line was enough, *because* everything behind it held still.
 
-Now watch what this implies, because it is the engineering thesis of the entire series and we have arrived at it honestly: **the amount of guaranteeing you need at runtime is inversely proportional to how much of your behavior was frozen in advance.** Melt a layer, and the verification that used to happen at design time has nowhere to go but into the running system. Determinism does not disappear when the body becomes generated. It *relocates*: out of the behavior, into the guarantees. Chapter 20 will build that runtime machinery in earnest. Every chapter between here and there is preparation for it.
+Now watch what this implies, because it is the engineering thesis of the entire series and we have arrived at it honestly: **the amount of guaranteeing you need at runtime is inversely proportional to how much of your behavior was frozen in advance.** Melt a layer, and the verification that used to happen at design time has nowhere to go but into the running system. Determinism does not disappear when the body becomes generated. It *relocates*: out of the behavior, into the guarantees. Chapter 12 will build that runtime machinery in earnest. Every chapter between here and there is preparation for it.
 
 ## 1.6 The First Crack in the Ice
 

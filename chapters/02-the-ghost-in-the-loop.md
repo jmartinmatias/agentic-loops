@@ -317,19 +317,19 @@ Read the trail like a flight recorder, because that is what it is. A reply that 
 >
 > Replace the scripted stand-in with a real model by swapping one object, using the official SDK. Nothing else in the file changes, which is the entire argument of section 2.5:
 >
-> ```python
-> import anthropic
+> ```python  
+> import anthropic  
 > client = anthropic.Anthropic()   # reads ANTHROPIC_API_KEY from the environment
 >
-> def live_model(prompt: str) -> str:
->     msg = client.messages.create(
->         model="claude-sonnet-4-6",
->         max_tokens=200,
->         messages=[{"role": "user", "content": prompt}],
->     )
+> def live_model(prompt: str) -> str:  
+>     msg = client.messages.create(  
+>         model="claude-sonnet-4-6",  
+>         max_tokens=200,  
+>         messages=[{"role": "user", "content": prompt}],  
+>     )  
 >     return msg.content[0].text
 >
-> final, trail = run(live_model)
+> final, trail = run(live_model)  
 > ```
 >
 > Run it a handful of times and study the trails. The orders will sometimes differ, the reasons will always differ, and every run should still end in the same verified report. If a guardrail fires, congratulations: you have caught a wild specimen of section 2.3, and your shell handled it while you watched. Current model names and API details live at docs.claude.com.

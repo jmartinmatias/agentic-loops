@@ -3,8 +3,8 @@
 # Chapter 1: One Small Step
 ### *Why the loop is the program*
 
-> "Program alarm."
-> "It's a 1202."
+> "Program alarm."  
+> "It's a 1202."  
 > *Neil Armstrong and Buzz Aldrin, descending, July 20, 1969*
 
 ---
@@ -93,9 +93,9 @@ Keep the word **frozen** close. In section 1.4 we will make it precise, and in C
 
 > **Four words for four books**
 >
-> **Body**: what happens during a computational step.
-> **Actor**: who or what performs the step.
-> **Flow**: how steps and actors are arranged over time.
+> **Body**: what happens during a computational step.  
+> **Actor**: who or what performs the step.  
+> **Flow**: how steps and actors are arranged over time.  
 > **Guarantee**: what must remain true, or be verified, regardless of the other three.
 >
 > This series tells one story: the first three layers, one by one, stop being written in advance and start being generated at runtime, while the fourth absorbs the responsibility they leave behind. This book melts the body. Its sequels melt the actor, then the flow. The guarantee is the layer we will fight, for four books, to keep frozen.

@@ -4,7 +4,7 @@
 
 *Book I of The Generativization Series, by José Luis Martin Matias.*
 
-<img src="cover/front.png" width="220" align="right" alt="Agentic Loops, front cover">
+<img src="cover/front.png" width="200" alt="Agentic Loops, front cover">
 
 > **When the machine decides, what keeps it honest?**
 
@@ -34,7 +34,7 @@ This repository holds two complete sample chapters, the labs that go with them, 
 | 2 | The Ghost in the Loop | ELIZA, 1966 | [Read it](chapters/02-the-ghost-in-the-loop.md) |
 | 3 | What the Machine Knows | Mars Climate Orbiter | full book |
 | 4 | The Art of the Next Move | John Boyd and the OODA loop | full book |
-| 5 | A Field Guide to Loops | AutoGPT, spring 2023 | full book |
+| 5 | A Field Guide to Loops | Auto-GPT, spring 2023 | full book |
 | 6 | Prompts Are Policies | Air Canada tribunal, 2024 | full book |
 | 7 | The Instruction Set | Jacquard's loom, 1804 | full book |
 | 8 | Working Memory | Patient H.M. | full book |

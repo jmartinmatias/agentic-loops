@@ -6,7 +6,7 @@
 
 ## Part I: The Machine That Decides
 
-**Chapter 1: One Small Step**  ·  free: [Markdown](../chapters/01-one-small-step.md) · [PDF](../chapters/01-one-small-step.pdf)
+**Chapter 1: One Small Step**  ·  free: [Markdown](../chapters/01-one-small-step.md) · [PDF](https://github.com/jmartinmatias/agentic-loops/raw/main/chapters/01-one-small-step.pdf)
 - 1.1 The Oldest Trick in Computing
 - 1.2 Programs as State Transitions
 - 1.3 Everything Is Secretly a Loop
@@ -16,7 +16,7 @@
 - 1.7 Lab: A Loop You Can Trust
 - Where We've Landed
 - What's Next
-**Chapter 2: The Ghost in the Loop**  ·  free: [Markdown](../chapters/02-the-ghost-in-the-loop.md) · [PDF](../chapters/02-the-ghost-in-the-loop.pdf)
+**Chapter 2: The Ghost in the Loop**  ·  free: [Markdown](../chapters/02-the-ghost-in-the-loop.md) · [PDF](https://github.com/jmartinmatias/agentic-loops/raw/main/chapters/02-the-ghost-in-the-loop.pdf)
 - 2.1 One Line of Difference
 - 2.2 A Policy, Not an Oracle
 - 2.3 Two Species of Wrong

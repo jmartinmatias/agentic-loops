@@ -26,14 +26,14 @@ guarantees you keep.
 
 ## Read two chapters here
 
-**In a hurry?** [AGENTIC_LOOPS_sample.pdf](AGENTIC_LOOPS_sample.pdf) is one file: the cover, the front matter, the preface, and Chapters 1 and 2 as typeset, through to the back cover.
+**In a hurry?** [AGENTIC_LOOPS_sample.pdf](https://github.com/jmartinmatias/agentic-loops/raw/main/AGENTIC_LOOPS_sample.pdf) is one file: the cover, the front matter, the preface, and Chapters 1 and 2 as typeset, through to the back cover.
 
-This repository holds two complete sample chapters, the labs that go with them, and the book's reference runtime. Each is here as Markdown and as a PDF cut from the typeset book. The book's preface and full table of contents are in [front-matter/](front-matter/), in both forms as well.
+This repository holds two complete sample chapters, the labs that go with them, and the book's reference runtime. Each is here as Markdown and as a PDF cut from the typeset book. The book's preface and full table of contents are in [front-matter/](front-matter/), in both forms as well. The PDF links open the files directly, which reads better than GitHub's preview.
 
 | # | Chapter | Anchor story | |
 |---|---|---|---|
-| 1 | One Small Step | Apollo 11, the 1202 alarm | [Markdown](chapters/01-one-small-step.md) · [PDF](chapters/01-one-small-step.pdf) |
-| 2 | The Ghost in the Loop | ELIZA, 1966 | [Markdown](chapters/02-the-ghost-in-the-loop.md) · [PDF](chapters/02-the-ghost-in-the-loop.pdf) |
+| 1 | One Small Step | Apollo 11, the 1202 alarm | [Markdown](chapters/01-one-small-step.md) · [PDF](https://github.com/jmartinmatias/agentic-loops/raw/main/chapters/01-one-small-step.pdf) |
+| 2 | The Ghost in the Loop | ELIZA, 1966 | [Markdown](chapters/02-the-ghost-in-the-loop.md) · [PDF](https://github.com/jmartinmatias/agentic-loops/raw/main/chapters/02-the-ghost-in-the-loop.pdf) |
 | 3 | What the Machine Knows | Mars Climate Orbiter | full book |
 | 4 | The Art of the Next Move | John Boyd and the OODA loop | full book |
 | 5 | A Field Guide to Loops | Auto-GPT, spring 2023 | full book |

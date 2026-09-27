@@ -148,7 +148,7 @@
 **Appendix A: The Minimal Agent Runtime**
 - Running it
 - What is where
-- The five lines that swap the model
+- The fourteen lines that swap the model
 - Extending it
 - What it deliberately does not do
 **Appendix B: Tool Schema Patterns**

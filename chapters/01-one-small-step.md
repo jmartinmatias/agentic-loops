@@ -5,19 +5,19 @@
 
 > "Program alarm."  
 > "It's a 1202."  
-> *Neil Armstrong and Buzz Aldrin, descending, July 20, 1969*
+> *Neil Armstrong, descending, July 20, 1969*
 
 ---
 
 Five minutes into the final descent, with the Moon filling the windows and the engine burning, the computer flying Apollo 11's lunar module said, in effect: *I have too much to do.*
 
-It said it as a number. **1202** flashed onto the display, a program alarm, a code no astronaut had a page for, and the master alarm sounded in the cabin. Neil Armstrong, a man whose heart rate the flight surgeons watched climb only twice in the whole mission, asked Houston for a reading on it. He and Buzz Aldrin were dropping toward the Sea of Tranquility in a machine with less memory than a short email, and the machine had just interrupted its own landing to complain.
+It said it as a number. **1202** flashed onto the display, a program alarm, a code no astronaut had a page for, and the master alarm sounded in the cabin. Neil Armstrong asked Houston for a reading on it. He and Buzz Aldrin were dropping toward the Sea of Tranquility in a machine with less memory than a short email, and the machine had just interrupted its own landing to complain.
 
 You will not appreciate what happened next until you know what was happening inside the box.
 
 The Apollo Guidance Computer was, by any modern measure, almost nothing: around seventy pounds of hand-wired electronics, a couple of kilobytes of erasable memory, a clock several thousand times slower than the phone in your pocket. Its software had been written over years at the MIT Instrumentation Laboratory by a team whose software engineering division was led by Margaret Hamilton. Written, and then literally *woven*, thread by thread through magnetic cores, by textile workers whose finished fabric was the program. If you wanted to change a line of code, you re-wove the rope.
 
-And at its heart, that software was a loop. Not a metaphorical loop: an executive scheduler, built on a design by Hal Laning, that cycled through a queue of jobs in strict priority order. Read the radar. Update the trajectory. Fire the thrusters. Refresh the display. Around and around, many times a second, each job hand-written, each transition known in advance, the whole choreography fixed months before launch and frozen (in the ropes, literally) for the flight.
+And at its heart, that software was a loop. Not a metaphorical loop: an executive scheduler, built on a design by Hal Laning, that cycled through a queue of jobs in strict priority order. Read the radar. Update the trajectory. Fire the thrusters. Refresh the display. Around and around, many times a second, each job handwritten, each transition known in advance, the whole choreography fixed months before launch and frozen (in the ropes, literally) for the flight.
 
 The 1202 alarm meant the loop was drowning. A checklist decision had left the rendezvous radar, the one you would need to find the command module again in an emergency, switched on during descent, and a subtle electrical mismatch made it flood the computer with meaningless interrupts, stealing roughly fifteen percent of its processing time. Fifteen percent does not sound fatal. But the descent schedule had been budgeted close to the bone, and the executive was now being asked to do more work per cycle than the cycle contained. Its job queue overflowed. Hence the alarm: 1202, executive overflow.
 
@@ -33,13 +33,13 @@ Every job the computer could run had been written by a person. Every transition 
 
 This book is about what happens when we thaw the first of those layers: when the next step of a program is *generated* by a model at runtime instead of written by a person in advance. It is a genuinely new way to build software, and it is the reason you picked this book up. But you cannot understand what changes until you can name, precisely, what used to be fixed. So this first chapter is about the machine we are leaving: the classical loop, in full. We will take it apart, name its four layers, meet it in the wild, and build one: a small, honest, deterministic loop that we will spend the rest of the book melting, one layer at a time.
 
-By the end of the chapter you will own four words (**body**, **actor**, **flow**, **guarantee**) and they will carry you through four books.
+By the end of the chapter you will own four words (**body**, **actor**, **flow**, **guarantee**) and they will carry you through five books.
 
 ---
 
 ## 1.1 The Oldest Trick in Computing
 
-Strip away sixty years of frameworks and there are only a handful of shapes a program can take. In 1966 (the same year, pleasingly, that a chatbot first fooled a secretary, but that is Chapter 2) two Italian computer scientists, Corrado Bohm and Giuseppe Jacopini, proved a result now folded so deeply into practice that nobody cites it anymore: *any* computation can be expressed with just three structures. Do this, then that (**sequence**). Do this *or* that (**selection**). Do this *again* (**iteration**).
+Strip away sixty years of frameworks and there are only a handful of shapes a program can take. In 1966 (the same year, pleasingly, that a chatbot first fooled a secretary, but that is Chapter 2) two Italian computer scientists, Corrado Böhm and Giuseppe Jacopini, proved a result now folded so deeply into practice that nobody cites it anymore: *any* computation can be expressed with just three structures. Do this, then that (**sequence**). Do this *or* that (**selection**). Do this *again* (**iteration**).
 
 Sequence and selection are clerks. They execute and they choose, and then they are finished. Iteration is different in kind. Iteration is the only structure that says *keep going until something is true*, the only one that lets a fixed, finite text produce unbounded, open-ended work. A thousand lines of woven rope flew a spacecraft for days, not because the rope was long, but because it looped.
 
@@ -73,7 +73,7 @@ Look at that tiny program long enough and it separates into layers, the way a la
 
 **What must remain true, no matter what?** That is the **guarantee**: the layer that does not *do* anything. It *forbids* and *verifies*. The priority ordering that said steering outranks displays. The restart tables. Garman's handwritten sheet, which was a guarantee wearing a human face.
 
-Draw them as a stack and label the Apollo column, because we will be redrawing this picture for four books:
+Draw them as a stack and label the Apollo column, because we will be redrawing this picture for five books:
 
 ```
  layer      | on Eagle, July 1969             | authored when?
@@ -91,14 +91,14 @@ The body, the actor, the flow: all of them are *artifacts*, fixed in advance, as
 
 Keep the word **frozen** close. In section 1.4 we will make it precise, and in Chapter 2 we will apply heat.
 
-> **Four words for four books**
+> **Four words for five books**
 >
 > **Body**: what happens during a computational step.  
 > **Actor**: who or what performs the step.  
 > **Flow**: how steps and actors are arranged over time.  
 > **Guarantee**: what must remain true, or be verified, regardless of the other three.
 >
-> This series tells one story: the first three layers, one by one, stop being written in advance and start being generated at runtime, while the fourth absorbs the responsibility they leave behind. This book melts the body. Its sequels melt the actor, then the flow. The guarantee is the layer we will fight, for four books, to keep frozen.
+> This series tells one story: the first three layers, one by one, stop being written in advance and start being generated at runtime, while the fourth absorbs the responsibility they leave behind. This book melts the body. Its sequels melt the actor, then the flow. The guarantee is the layer we will fight, for five books, to keep frozen.
 
 ## 1.3 Everything Is Secretly a Loop
 
@@ -122,7 +122,7 @@ Which sets up the real question, the one the rest of this book exists to answer:
 
 ## 1.4 What "Frozen" Means
 
-Time to make our central metaphor precise, because we are going to lean on it for four books.
+Time to make our central metaphor precise, because we are going to lean on it for five books.
 
 Every piece of a software system belongs to one of three categories, and the sorting question is simply: *when does it come into existence?*
 
@@ -160,7 +160,7 @@ So here is the classical machine, complete: a frozen body, executed by a frozen 
 
 And its limitation is the same fact as its virtue: *the body can only contain decisions somebody already made.* Every branch anticipated, every case enumerated, every "what next?" answered in advance by a person at a desk. For sixty years, when the world presented a situation the authors had not foreseen, software had exactly two moves: fail, or do the wrong thing confidently.
 
-Chapter 2 makes the third move. We take the loop you are about to build, specifically one line of it, and replace the hand-written transition with an inference call:
+Chapter 2 makes the third move. We take the loop you are about to build, specifically one line of it, and replace the handwritten transition with an inference call:
 
 ```
 state = f(state)        # a person wrote f, in advance
@@ -171,7 +171,7 @@ One line. It looks like a refactor. It is a phase change: the first artifact in 
 
 ## 1.7 Lab: A Loop You Can Trust
 
-Meet **Meridian**, the company we will be keeping for four books: a mid-market subscription business, ten thousand customers, and a churn number that has lately given its executives a reason to take early lunches. Meridian will grow more elaborate as we go. Today it has ten accounts and one need: a churn report, produced by a loop so plain you could explain it to a review board on a napkin.
+Meet **Meridian**, the company we will be keeping for most of the series: a mid-market subscription business, ten thousand customers, and a churn number that has lately given its executives a reason to take early lunches. Meridian will grow more elaborate as we go. Today it has ten accounts and one need: a churn report, produced by a loop so plain you could explain it to a review board on a napkin.
 
 Everything in this lab is deliberately, pointedly deterministic. Same input, same output, every run, forever. Savor that. It is the last chapter where it comes free.
 
@@ -244,7 +244,7 @@ def report(s: State) -> State:
     return replace(s, phase=Phase.DONE, report="\n".join(lines))
 
 # ---------------------------------------------------------------
-# THE FLOW -- how steps are arranged over time. Also hand-written.
+# THE FLOW -- how steps are arranged over time. Also handwritten.
 # ---------------------------------------------------------------
 
 FLOW = {
@@ -278,7 +278,7 @@ def run(state: State = State(), flow=FLOW):
     return state, trail
 ```
 
-Before running it, walk the anatomy, because this file is the whole chapter in ninety lines. The **state** is one frozen dataclass: every fact the loop knows, immutable, so each step's input and output can be captured whole.
+Before running it, walk the anatomy, because this file is the whole chapter in a hundred lines. The **state** is one frozen dataclass: every fact the loop knows, immutable, so each step's input and output can be captured whole.
 
 The **body** is four pure functions, each taking a state and returning the next; note that they contain *all* of the intelligence and *none* of the control.
 
@@ -359,7 +359,7 @@ And the series' single transformation is now on the table: `G(x)` turns an artif
 
 ## What's Next
 
-In 1966, while Bohm and Jacopini were proving what loops could do, a computer scientist at MIT wrote a few hundred lines of pattern-matching code and discovered, to his lasting horror, that people would pour their hearts out to it. In the next chapter we put a model inside the loop, and find out why the hardest part is not making it work, but knowing what "working" now means.
+In 1966, while Böhm and Jacopini were proving what loops could do, a computer scientist at MIT wrote a few hundred lines of pattern-matching code and discovered, to his lasting horror, that people would pour their hearts out to it. In the next chapter we put a model inside the loop, and find out why the hardest part is not making it work, but knowing what "working" now means.
 
 *Steve Bales said GO because he could finish the sentence "the machine will now..." with every clause of it written by someone he could name. The rest of this book is about earning that sentence back after we hand the pen to the machine.*
 

@@ -67,7 +67,7 @@ Put a model inside the loop and the next step stops being something you wrote. T
 
 This book is about getting those guarantees back, deliberately, by hand, as engineering.
 
-You will build an agent from the ground up: a state that tells the truth about a moving world, a doorway that admits only well-formed actions, an instruction set that decides what the machine may touch, a working memory that fits, a harness that survives being killed mid-task, a stopping stack that knows the word for enough, a verification ladder that stands between the model's words and their consequences, and a meter that prices the whole thing before the invoice does.
+You will build an agent from the ground up: a state that tells the truth about a moving world, a doorway that admits only well-formed actions, an instruction set that decides what the machine may touch, a working memory that fits, a harness that survives being killed mid-task, a stopping stack that knows the word for enough, a verifier ladder that stands between the model's words and their consequences, and a meter that prices the whole thing before the invoice does.
 
 Along the way: why the Apollo guidance computer shed work instead of crashing, why a Canadian tribunal held an airline to its chatbot's invention, why coding agents got good first, why a $440 million loss took forty-five minutes and no model at all, and what a man who could not form new memories can teach you about context windows.
 
@@ -79,18 +79,31 @@ Engineers building agents who have discovered that the demo was the easy part. A
 
 ## What makes it different
 
-- Readers looking for prompt tips or a framework tutorial. No framework is
-  taught here; the point is the architecture underneath all of them.
-- Readers who want the future-of-work argument. That is Book IV.
+**It is about the shell, not the model.** The industry writes about the model.
+The reliability lives in everything around it, and that is what you own, ship,
+and improve on your own schedule.
+
+**Every lab runs without an API key.** The model is a port; the book uses a
+deterministic adapter so the behavior on the page is the behavior on your
+machine. Swap in a live model with one adapter when you want the real thing.
+
+**Every anchor story is documented.** Apollo, ELIZA, Mars Climate Orbiter,
+Jacquard, Molaison, Knight Capital, Air Canada. No invented anecdotes.
+
+**It has a theory, and the theory earns its keep.** Software evolves by turning
+things that were written in advance into things generated at runtime. This book
+performs that transformation on exactly one layer, the contents of a step, and
+holds the rest still so you can see what it costs.
 
 ## The series
 
 - **Book I, Agentic Loops:** the model decides *what happens next*. This repository.
 - **Book II, Generative Agents:** the system decides *who exists to do the work*.
 - **Book III, Generative Loops:** the system decides *what computation to run*.
-- **Book IV, After Software:** what remains when all three are generated.
+- **Book IV, Scar Tissue:** what survives contact with reality.
+- **Book V, After Software:** what remains when all three are generated.
 
-Each book ends by exposing the next thing still frozen.
+Each of the first three books ends by exposing the next thing still frozen.
 
 ## Licenses
 

@@ -42,7 +42,7 @@ The work, then, is to rebuild deliberately what you used to get by accident.
 That turns out to be a real engineering discipline with real machinery: state
 that tells the truth about a world that moves, doorways narrow enough that only
 well-formed actions get through, receipts, gates on the things that cannot be
-undone, memory policies, stopping conditions, verification ladders, and an
+undone, memory policies, stopping conditions, verifier ladders, and an
 honest meter. None of it is exotic. Almost all of it will feel familiar to
 anyone who has built distributed systems, which is the most encouraging thing I
 can tell you: this is not a new kind of engineering, it is engineering you
@@ -61,7 +61,7 @@ story is the shortest path to why the principle exists. The alarm that almost
 ended the first Moon landing. A secretary in 1966 who asked to be left alone
 with a computer program. Two spacecraft teams and two systems of units. A loom
 in Lyon. A man who could not form new memories. Forty-five minutes in 2012 that
-cost four hundred and forty million dollars. An airline that argued in court
+cost four hundred and forty million dollars. An airline that argued before a tribunal
 that its chatbot was a separate legal entity. None of these are invented and
 none are decorative; each one is the chapter's argument, already made, by
 reality.
@@ -72,7 +72,7 @@ API key and no third-party libraries. That is a deliberate design choice, not a
 limitation: the model in these labs is a deterministic stand-in behind the same
 interface a real model uses, which means the behavior on the page is the
 behavior on your machine, and the whole book becomes reproducible. When you
-want the real thing, Appendix A shows you the five lines that swap it in.
+want the real thing, Appendix A shows you the fourteen lines that swap it in.
 
 **Two closing instructions.** One practical, usually asking you to break what
 you just built, because you learn more from the failure than the success. One
@@ -102,15 +102,16 @@ where the engineering stops.
 
 ## A word on the series, and on honesty
 
-This is the first of four books, and I want to be straightforward about that
+This is the first of five books, and I want to be straightforward about that
 rather than coy.
 
-The argument that runs underneath all four is simple to state: software evolves
+The argument that runs underneath all five is simple to state: software evolves
 by taking things that used to be written in advance and letting the running
 system produce them instead. This book does that to exactly one layer, the
 contents of a step, and holds everything else still, so you can see clearly
 what melting one layer costs and what has to be built to pay for it. Book II
-does it to the actor, Book III to the flow, and Book IV asks what is left.
+does it to the actor, Book III to the flow, Book IV tests all three against
+reality, and Book V asks what is left.
 
 But Book I has to stand on its own, and I have tried hard to make it do that.
 If you never read another word of the series, you should finish this book able
@@ -124,8 +125,8 @@ every lab here runs. The larger arc is an argument, offered as an argument, and
 you should feel free to take the machinery and leave the philosophy.
 
 One practical note. Every term the series relies on, from artifact and
-emission to the frozen core, is defined in this book at first use, and all of
-them are collected in one glossary, Appendix E of Book IV.
+emission to the frozen core, is defined in the series at first use, and all of
+them are collected in one glossary, Appendix E of Book V.
 
 ## Who I hope reads it
 
@@ -147,7 +148,7 @@ for.
 
 ---
 
-*Now: Chapter 1, and a computer alarm, twelve hundred meters above the Moon.*
+*Now: Chapter 1, and a computer alarm, ten kilometers above the Moon.*
 
 ---
 

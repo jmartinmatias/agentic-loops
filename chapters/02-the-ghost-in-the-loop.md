@@ -11,7 +11,7 @@ In 1966, at MIT, a computer scientist named Joseph Weizenbaum built a program to
 
 Then his secretary sat down at the terminal. She had watched him build the thing. She knew, in the way you know about a colleague's project, exactly what it was. After a few exchanges she asked Weizenbaum to leave the room, because the conversation had become private.
 
-He never fully recovered from that. People who knew precisely what ELIZA was confided in it anyway; some asked whether the sessions were being recorded, and objected. Weizenbaum spent much of the rest of his career, including an entire anguished book, warning the world about what he had accidentally demonstrated: that humans will extend trust, intimacy, and the presumption of a mind to anything that holds up its end of a conversation. The phenomenon still bears his program's name. Researchers call it the ELIZA effect.
+He never fully recovered from that. People who knew precisely what ELIZA was confided in it anyway, and when he proposed reading the transcripts, he was accused of spying on them. Weizenbaum spent much of the rest of his career, including an entire anguished book, warning the world about what he had accidentally demonstrated: that humans will extend trust, intimacy, and the presumption of a mind to anything that holds up its end of a conversation. The phenomenon still bears his program's name. Researchers call it the ELIZA effect.
 
 Here is the detail that matters for us, the one that makes ELIZA the perfect front door to this chapter rather than just a good story. ELIZA was *frozen*. Completely, provably, line-by-line frozen. Every response it ever gave was the deterministic output of rules a person had written; you could take any exchange, however uncanny, and trace it back to a numbered pattern in the DOCTOR script. In the vocabulary you earned in Chapter 1: the body was an artifact, the flow was an artifact, and the ghost was not in the machine at all. The ghost was in the reader.
 
@@ -57,7 +57,7 @@ Chapter 1's machine could fail, and did, in front of half a billion people. But 
 
 Model errors are a different species, and the difference is the intellectual adjustment this chapter is really asking of you. A model's error arrives fluent, well-formatted, and confident, indistinguishable in tone from its correct output. It may not reproduce: sample again and the error is gone, or different. It shifts with context in ways no line of code explains, because there is no line of code; there are weights, and you do not get to edit them. A program that is wrong crashes or contradicts itself. A model that is wrong *testifies*. Programs fail like machines. Models fail like witnesses: sincerely, plausibly, and sometimes about things that never happened.
 
-The practical taxonomy has four entries, and you will meet all four, in the flesh, in this chapter's lab:
+The practical taxonomy has four entries, and you will meet three of them, in the flesh, in this chapter's lab:
 
 **Malformed output.** You asked for JSON; you received an enthusiastic paragraph. The cheapest error, because it is mechanically detectable at the boundary.
 
@@ -292,7 +292,7 @@ MERIDIAN CHURN REPORT  |  overall: 30%
 
 The same report as Chapter 1, and the trail even reads the same, with one addition that should stop you for a second: the parentheses. Each step now carries its reason, in the decider's own words, at the moment of deciding. And remember what is absent from the file entirely: nobody told this program the order. Load before compute, compute before segment: that ordering was generated, step by step, from a rendered description of the state. You are looking at the first emission of the series.
 
-But Run 1 is the demo. Run 2 is the chapter. Same shell, and a model having a worse day: one malformed reply, one hallucinated action, one premature declaration of victory, the full taxonomy on parade:
+But Run 1 is the demo. Run 2 is the chapter. Same shell, and a model having a worse day: one malformed reply, one hallucinated action, one premature declaration of victory, three of the four entries on parade:
 
 ```text
 --- RUN 2: the same shell, a worse day ---
@@ -311,7 +311,7 @@ MERIDIAN CHURN REPORT  |  overall: 30%
   pro           25%
 ```
 
-Read the trail like a flight recorder, because that is what it is. A reply that was not JSON: rejected at the boundary, one repair spent. An action that does not exist, `email_the_ceo`, invented from thin air with a perfectly plausible reason attached: rejected by the vocabulary, second repair. A claim of success with no report in the state: rejected by the postcondition, third repair. And then, the finding: **the final report is byte-for-byte identical to Run 1's.** A misbehaving model, inside a sound shell, produced exactly the outcome a well-behaved one did, three incidents on the record, one repair still in the bank. In Chapter 1, the guarantee's whole job was to stop a broken body from running forever. The job has grown: the guarantees now steer a fallible decider back onto the road, mid-journey, without ever once understanding the road themselves. That is the trade this book asked you to consider, shown in eleven lines of terminal output. The behavior became fluid. The outcome did not.
+Read the trail like a flight recorder, because that is what it is. A reply that was not JSON: rejected at the boundary, one repair spent. An action that does not exist, `email_the_ceo`, invented from thin air with a perfectly plausible reason attached: rejected by the vocabulary, second repair. A claim of success with no report in the state: rejected by the postcondition, third repair. And then, the finding: **the final report is byte-for-byte identical to Run 1's.** A misbehaving model, inside a sound shell, produced exactly the outcome a well-behaved one did, three incidents on the record, one repair still in the bank. In Chapter 1, the guarantee's whole job was to stop a broken body from running forever. The job has grown: the guarantees now steer a fallible decider back onto the road, mid-journey, without ever once understanding the road themselves. That is the trade this book asked you to consider, shown in fourteen lines of terminal output. The behavior became fluid. The outcome did not.
 
 > **Going live**
 >
@@ -338,7 +338,7 @@ Two closing instructions, in the Chapter 1 tradition.
 
 Practical: extend the shell, not the model. Feed rejection reasons back into the next prompt and measure whether repairs drop. Add a precondition guardrail (`compute` should be refusable when no accounts are loaded) and script a model that trips it. Then write the nastiest test in the book so far: a scripted model that answers `finish` with a plausible reason before any work is done, forever, and confirm which budget catches it and what the trail says afterward.
 
-And in pencil, circle two regions. The `render` function, currently six honest lines: Chapter 8 lives entirely inside it, and it will not stay six lines. And the three guardrails, currently catching what a parser can see: Chapters 10 through 12 are the story of teaching that layer to catch what only a verifier can.
+And in pencil, circle two regions. The `render` function, currently thirteen honest lines: Chapter 8 lives entirely inside it, and it will not stay thirteen lines. And the three guardrails, currently catching what a parser can see: Chapters 10 through 12 are the story of teaching that layer to catch what only a verifier can.
 
 ---
 
@@ -348,7 +348,7 @@ One line melted, and the whole trust model reorganized around it. A model inside
 
 ## What's Next
 
-The shell you just built has a dangerously innocent line in it: `render(state)` assumed the state was worth rendering. In 1999 two teams of excellent engineers flew a spacecraft into Mars because a number crossed a boundary without its units, a lesson about observation and contracts that cost three hundred million dollars and opens the next chapter. Before a model can decide well, it has to know what the world actually looks like. That turns out to be a discipline of its own.
+The shell you just built has a dangerously innocent line in it: `render(state)` assumed the state was worth rendering. In 1999 two teams of excellent engineers flew a spacecraft into Mars because a number crossed a boundary without its units, a lesson about observation and contracts that cost a spacecraft worth well over a hundred million dollars and opens the next chapter. Before a model can decide well, it has to know what the world actually looks like. That turns out to be a discipline of its own.
 
 *Weizenbaum's secretary trusted a frozen script because it sounded alive. Bales trusted a fluid situation because everything around it held still. Between those two kinds of trust sits the whole craft of this book: the secretary could not say why she believed; Bales could. Build shells that put you, permanently, on Bales's side of that line.*
 

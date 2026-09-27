@@ -66,7 +66,7 @@ def report(s: State) -> State:
     return replace(s, phase=Phase.DONE, report="\n".join(lines))
 
 # ---------------------------------------------------------------
-# THE FLOW -- how steps are arranged over time. Also hand-written.
+# THE FLOW -- how steps are arranged over time. Also handwritten.
 # ---------------------------------------------------------------
 
 FLOW = {

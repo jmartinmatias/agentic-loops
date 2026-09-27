@@ -57,7 +57,7 @@ class State:
 
 # =====================================================================
 # 2. PORTS  (Chapter 9)
-# The runtime core never imports a vendor. Three interfaces.
+# The runtime core never imports a vendor. Two interfaces.
 # =====================================================================
 
 class ModelPort(Protocol):
@@ -88,7 +88,7 @@ class ScriptedModel:
             return json.dumps({"action": "finish", "reason": "script exhausted"})
         return self.replies.pop(0)
 
-# --- adapter: live (the five lines the book promised) ----------------
+# --- adapter: live (the swap the book promised) ----------------------
 
 class LiveModel:
     """Requires: pip install anthropic; env ANTHROPIC_API_KEY."""

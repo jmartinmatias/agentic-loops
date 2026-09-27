@@ -90,7 +90,7 @@
 - What's Next
 **Chapter 9: The Exoskeleton**
 - 9.1 The Model Is Not the Agent
-- 9.2 The Envelope, Assembled
+- 9.2 The Suit, Assembled
 - 9.3 Harness Patterns
 - 9.4 Portability
 - 9.5 Lab: The Signature Build

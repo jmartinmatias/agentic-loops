@@ -3,7 +3,8 @@
 # Chapter 2: The Ghost in the Loop
 ### *Putting a model inside*
 
-> The question is not whether machines think, but whether people can stop themselves from believing they do.
+> The question is not whether machines think, but whether people can stop themselves from believing they do.  
+> *Claude, a language model, 2026*
 
 ---
 

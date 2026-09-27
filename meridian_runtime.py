@@ -329,7 +329,7 @@ class Harness:
                           f"(repair {budgets['repairs']}/{self.cfg.max_repairs})")
                 continue
 
-            if action not in self.cfg.grant:                 # capability envelope
+            if action not in self.cfg.grant:                 # capability grant
                 self._log(state.step, "guardrail",
                           f"step {state.step}: BLOCKED -- {action} is not in this "
                           f"task's grant; capability absent, not merely denied")

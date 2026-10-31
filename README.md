@@ -41,10 +41,10 @@ Chapter 1 takes the classical loop apart and builds one you can trust. Chapter 2
 
 ## Run the labs
 
-Every chapter of the book ends with a lab. The labs for the chapters published here are included in full, together with the reference runtime from Appendix A, the file every chapter builds toward. The labs for the other chapters ship with the book. Nothing here needs an API key or a third-party package. Wherever a model would decide, a deterministic stand-in decides behind the same interface a real model uses, which is why the output printed in the book is the output you will see on your machine.
+Every chapter of the book ends with a lab. All 13 chapter labs are included in full, together with the reference runtime from Appendix A, the file every chapter builds toward. The default examples need no API key or a third-party package. Wherever a model would decide, a deterministic stand-in decides behind the same interface a real model uses, which is why the output printed in the book is the output you will see on your machine.
 
 ```bash
-./run_all_labs.sh                              # both labs plus the runtime
+./run_all_labs.sh                              # all 13 labs plus the runtime
 python3 labs/ch02_the_ghost_in_the_loop_lab.py # one chapter's lab
 python3 meridian_runtime.py                    # the reference runtime
 python3 meridian_runtime.py --crash-after 2    # kill mid-run, then resume
@@ -57,9 +57,28 @@ Python 3.10 or newer is required. Only `--live` needs anything installed: `pip i
 
 | Lab | What it shows |
 |---|---|
-| `ch01_one_small_step_lab.py` | A deterministic loop, then one component that forgets to advance |
-| `ch02_the_ghost_in_the_loop_lab.py` | The same loop with a model deciding, and the shell that keeps it honest |
+| [`ch01_one_small_step_lab.py`](labs/ch01_one_small_step_lab.py) | A deterministic loop, then one component that forgets to advance |
+| [`ch02_the_ghost_in_the_loop_lab.py`](labs/ch02_the_ghost_in_the_loop_lab.py) | The same loop with a model deciding, and the shell that keeps it honest |
+| [`ch03_what_the_machine_knows_lab.py`](labs/ch03_what_the_machine_knows_lab.py) | What the Machine Knows |
+| [`ch04_the_art_of_the_next_move_lab.py`](labs/ch04_the_art_of_the_next_move_lab.py) | The Art of the Next Move |
+| [`ch05_a_field_guide_to_loops_lab.py`](labs/ch05_a_field_guide_to_loops_lab.py) | A Field Guide to Loops |
+| [`ch06_prompts_are_policies_lab.py`](labs/ch06_prompts_are_policies_lab.py) | Prompts Are Policies |
+| [`ch07_the_instruction_set_lab.py`](labs/ch07_the_instruction_set_lab.py) | The Instruction Set |
+| [`ch08_working_memory_lab.py`](labs/ch08_working_memory_lab.py) | Working Memory |
+| [`ch09_the_exoskeleton_lab.py`](labs/ch09_the_exoskeleton_lab.py) | The Exoskeleton |
+| [`ch10_knowing_when_to_stop_lab.py`](labs/ch10_knowing_when_to_stop_lab.py) | Knowing When to Stop |
+| [`ch11_when_loops_go_wrong_lab.py`](labs/ch11_when_loops_go_wrong_lab.py) | When Loops Go Wrong |
+| [`ch12_trust_but_verify_lab.py`](labs/ch12_trust_but_verify_lab.py) | Trust, but Verify |
+| [`ch13_the_price_of_a_thought_lab.py`](labs/ch13_the_price_of_a_thought_lab.py) | The Price of a Thought |
 | `meridian_runtime.py` | The book in one file: the reference runtime everything builds toward |
+
+## Code for the first edition
+
+[Download the first-edition code ZIP](https://github.com/jmartinmatias/agentic-loops/archive/refs/tags/book-1-edition-1-code-v1.0.0.zip) or read the [release notes](https://github.com/jmartinmatias/agentic-loops/releases/tag/book-1-edition-1-code-v1.0.0). No purchase verification, signup or API key is required to download and run the default examples.
+
+Unzip the download, open a terminal in the extracted folder, and run the commands above. On Windows, run individual files with Python, or use Git Bash/WSL for the shell runner. Code runs on your computer, not on the Kindle. Optional live mode sends requests to the model provider and may incur API charges; keep your API key out of source files.
+
+The Kindle edition links to `book-1-edition-1-code-v1.0.0`, a fixed snapshot. The main branch may receive later fixes; use the tagged release to reproduce this edition. Report problems through [GitHub Issues](https://github.com/jmartinmatias/agentic-loops/issues), including the release tag, Python version and error output. Do not include API keys or personal data.
 
 ## What the book is about
 
